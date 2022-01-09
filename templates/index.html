@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+<center>
+  <body style="background-color: #008B8B;">
+ <div class="login">
+	<h1>Prediksi Harga Hotel Bintang 4 di Bandung</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<p> Rating<input type="text" name="Angka Melek Huruf Penduduk Umur 15-24 Tahun Menurut Provinsi" placeholder="Angka" required="required" />
+       
+        <button type="submit" class="btn btn-primary btn-block btn-large">Cek Harga Hotel</button></p>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+</center>
+ </div>
+
+</body>
+</html>
